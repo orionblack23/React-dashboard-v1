@@ -1,5 +1,6 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
+
 import {
   cilBell,
   cilCalculator,
@@ -11,6 +12,15 @@ import {
   cilPuzzle,
   cilSpeedometer,
   cilStar,
+  cilSettings,
+  cilCart,
+  cilTruck,
+  cilBox,
+  cilBasket,
+  cilFolderOpen,
+  //cilmoneybillalt2,
+  cilGroup,
+  //cilnewreleases,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -20,273 +30,138 @@ const _nav = [
     name: 'Dashboard',
     to: '/dashboard',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
-    component: CNavTitle,
-    name: 'Theme',
-  },
-  {
-    component: CNavItem,
-    name: 'Colors',
-    to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
-    name: 'Components',
   },
   {
     component: CNavGroup,
-    name: 'Base',
-    to: '/base',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    name: 'Sales',
+    to: '/sales',
+    icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
-        to: '/base/accordion',
+        name: 'Add a new sale',
+        to: '/sales/add-new-sale',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
-        to: '/base/breadcrumbs',
-      },
-      {
-        component: CNavItem,
-        name: 'Cards',
-        to: '/base/cards',
-      },
-      {
-        component: CNavItem,
-        name: 'Carousel',
-        to: '/base/carousels',
-      },
-      {
-        component: CNavItem,
-        name: 'Collapse',
-        to: '/base/collapses',
-      },
-      {
-        component: CNavItem,
-        name: 'List group',
-        to: '/base/list-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
-      },
-      {
-        component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
-      },
-      {
-        component: CNavItem,
-        name: 'Popovers',
-        to: '/base/popovers',
-      },
-      {
-        component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
-      },
-      {
-        component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
-      },
-      {
-        component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
-      },
-      {
-        component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
+        name: 'All Sales',
+        to: '/sales/all-sales',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    name: 'Purchases',
+    to: '/purchases',
+    icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Buttons',
-        to: '/buttons/buttons',
+        name: 'Add a new purchase',
+        to: '/purchases/add-new-purchase',
       },
       {
         component: CNavItem,
-        name: 'Buttons groups',
-        to: '/buttons/button-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Dropdowns',
-        to: '/buttons/dropdowns',
+        name: 'All purchases',
+        to: '/purchases/all-purchases',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Forms',
+    name: 'Products',
+    to: '/products',
+    icon: <CIcon icon={cilBasket} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Add a new product',
+        to: '/products/add-new-product',
+      },
+      {
+        component: CNavItem,
+        name: 'All product',
+        to: '/products/all-products',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Products Categories',
+    to: '/products-categories',
+    icon: <CIcon icon={cilFolderOpen} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Add a category',
+        to: '/products-categories/add-category',
+      },
+      {
+        component: CNavItem,
+        name: 'All categories',
+        to: '/products-categories/all-categories',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Customers',
+    to: '/customers',
+    icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Add a new customer',
+        to: '/customers/add-new-customer',
+      },
+      {
+        component: CNavItem,
+        name: 'All customers',
+        to: '/customers/all-customers',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Suppliers',
+    to: '/suppliers',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Form Control',
-        to: '/forms/form-control',
+        name: 'Add a new supplier',
+        to: '/suppliers/add-new-supplier',
       },
       {
         component: CNavItem,
-        name: 'Select',
-        to: '/forms/select',
-      },
-      {
-        component: CNavItem,
-        name: 'Checks & Radios',
-        to: '/forms/checks-radios',
-      },
-      {
-        component: CNavItem,
-        name: 'Range',
-        to: '/forms/range',
-      },
-      {
-        component: CNavItem,
-        name: 'Input Group',
-        to: '/forms/input-group',
-      },
-      {
-        component: CNavItem,
-        name: 'Floating Labels',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: CNavItem,
-        name: 'Validation',
-        to: '/forms/validation',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavGroup,
-    name: 'Icons',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'CoreUI Free',
-        to: '/icons/coreui-icons',
-        badge: {
-          color: 'success',
-          text: 'NEW',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Flags',
-        to: '/icons/flags',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Brands',
-        to: '/icons/brands',
+        name: 'All suppliers',
+        to: '/suppliers/all-suppliers',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Notifications',
-    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-      {
-        component: CNavItem,
-        name: 'Badges',
-        to: '/notifications/badges',
-      },
-      {
-        component: CNavItem,
-        name: 'Modal',
-        to: '/notifications/modals',
-      },
-      {
-        component: CNavItem,
-        name: 'Toasts',
-        to: '/notifications/toasts',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
+    name: 'External bills',
+    to: '/external-bills',
     icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
-    component: CNavTitle,
-    name: 'Extras',
-  },
-  {
-    component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Login',
-        to: '/login',
+        name: 'Add a new bill',
+        to: '/external-bills/add-new-bill',
       },
       {
         component: CNavItem,
-        name: 'Register',
-        to: '/register',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 404',
-        to: '/404',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 500',
-        to: '/500',
+        name: 'All bills',
+        to: '/external-bills/all-bills',
       },
     ],
+  },
+  {
+    component: CNavItem,
+    name: 'Settings',
+    to: '/settings',
+    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
   },
 ]
 

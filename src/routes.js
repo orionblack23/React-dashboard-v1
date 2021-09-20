@@ -53,6 +53,33 @@ const Toasts = React.lazy(() => import('./views/components/notifications/toasts/
 
 const Widgets = React.lazy(() => import('./views/components/widgets/Widgets'))
 
+//custom made
+const AllSales = React.lazy(() => import('./views/sales/all sales/AllSales'))
+const AddNewSale = React.lazy(() => import('./views/sales/add new sale/AddNewSale'))
+const AllPurchases = React.lazy(() => import('./views/purchases/all purchases/allPurchases'))
+const AddNewPurchase = React.lazy(() =>
+  import('./views/purchases/add a new purchase/addNewPurchase'),
+)
+const AllProducts = React.lazy(() => import('./views/products/all products/AllProducts'))
+const AddNewProduct = React.lazy(() => import('./views/products/add a new product/AddNewProduct'))
+const AllCategories = React.lazy(() =>
+  import('./views/products categories/all categories/AllCategories'),
+)
+const AddCategory = React.lazy(() =>
+  import('./views/products categories/add a category/AddCategory'),
+)
+const AllCustomers = React.lazy(() => import('./views/customers/all customers/AllCustomers'))
+const AddNewCustomer = React.lazy(() =>
+  import('./views/customers/add a new customer/AddNewCustomer'),
+)
+const AllSuppliers = React.lazy(() => import('./views/suppliers/all suppliers/AllSuppliers'))
+const AddNewSupplier = React.lazy(() =>
+  import('./views/suppliers/add a new supplier/AddNewSupplier'),
+)
+const AllBills = React.lazy(() => import('./views/external bills/all bills/AllBills'))
+const AddNewBill = React.lazy(() => import('./views/external bills/add a bill/AddNewBill'))
+const Settings = React.lazy(() => import('./views/settings/Settings'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
@@ -97,6 +124,46 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', component: Modals },
   { path: '/notifications/toasts', name: 'Toasts', component: Toasts },
   { path: '/widgets', name: 'Widgets', component: Widgets },
+  //custom made routes
+  //sales
+  { path: '/sales', name: 'Sales', component: AddNewSale, exact: true },
+  { path: '/sales/add-new-sale', name: 'Add New Sale', component: AddNewSale },
+  { path: '/sales/all-sales', name: 'All Sales', component: AllSales },
+  //purchases
+  { path: '/purchases', name: 'Purchases', component: AddNewPurchase, exact: true },
+  { path: '/purchases/add-new-purchase', name: 'Add New Purchase', component: AddNewPurchase },
+  { path: '/purchases/all-purchases', name: 'All Sales', component: AllPurchases },
+  //products
+  { path: '/products', name: 'Products', component: AddNewProduct, exact: true },
+  { path: '/products/add-new-product', name: 'Add New Product', component: AddNewProduct },
+  { path: '/products/all-products', name: 'All Products', component: AllProducts },
+  //products categories
+  {
+    path: '/products-categories',
+    name: 'Products Categories',
+    component: AddCategory,
+    exact: true,
+  },
+  {
+    path: '/products-categories/add-category',
+    name: 'Add New Category',
+    component: AddCategory,
+  },
+  { path: '/products-categories/all-categories', name: 'All Category', component: AllCategories },
+  //customers
+  { path: '/customers', name: 'Customers', component: AddNewCustomer, exact: true },
+  { path: '/customers/add-new-customer', name: 'Add New Customer', component: AddNewCustomer },
+  { path: '/customers/all-customers', name: 'All Customers', component: AllCustomers },
+  //suppliers
+  { path: '/suppliers', name: 'Suppliers', component: AddNewSupplier, exact: true },
+  { path: '/suppliers/add-new-supplier', name: 'Add New Supplier', component: AddNewSupplier },
+  { path: '/suppliers/all-suppliers', name: 'All suppliers', component: AllSuppliers },
+  //external bills
+  { path: '/external-bills', name: 'External bills', component: AddNewBill, exact: true },
+  { path: '/external-bills/add-new-bill', name: 'Add New Bill', component: AddNewBill },
+  { path: '/external-bills/all-bills', name: 'All Bills', component: AllBills },
+  //settings
+  { path: '/settings', name: 'Settings', component: Settings },
 ]
 
 export default routes
